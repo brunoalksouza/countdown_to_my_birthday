@@ -16,15 +16,15 @@ function updateCountdownTime() {
   const m = Math.floor(diff / 1000 / 60) % 60;
   const s = Math.floor(diff / 1000) % 60;
 
-//   days.innerHTML = d;
-//   hours.innerHTML = d < 10 ? "0" + d : d;
-//   minutes.innerHTML = m < 10 ? "0" + m : m;
-//   seconds.innerHTML = s < 10 ? "0" + s : s;
-
-
+  days.innerHTML = d;
+  hours.innerHTML = d < 10 ? "0" + d : d;
+  minutes.innerHTML = m < 10 ? "0" + m : m;
+  seconds.innerHTML = s < 10 ? "0" + s : s;
 
   console.log( d + "-" + h + "-" + m + "-" + s);
 }
 
 setInterval(updateCountdownTime, 1000);
  
+
+// modal

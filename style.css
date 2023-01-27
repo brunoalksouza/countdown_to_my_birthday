@@ -23,7 +23,7 @@ main {
 
 /* timer */
 
-.countdown-container{
+.countdown-container {
   margin-right: 50px;
 }
 
@@ -53,17 +53,20 @@ li {
 /* botao */
 
 .botao {
-  background-color: #5852C2;
+  background-color: #5852c2;
   font-size: 24px;
   border-radius: 5px;
   padding: 10px;
   color: white;
-  border: 1px solid black;
+  border: none;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   border-width: 1px 1px;
-  transition: .3s;
+  transition: 0.2s;
 }
 
-.botao:hover{
-    cursor: pointer;
-    transform: scale(1.07);
+.botao:hover {
+  cursor: pointer;
+  transform: scale(1.05);
 }
