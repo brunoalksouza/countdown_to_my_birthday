@@ -2,43 +2,47 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
 
 </head>
 
 <body>
-  <main>
-    <section class="timer">
-      <p class="title">Preparing to launch</p>
-      <ul id="countdown">
-        <li id="days">
-          <div class="number">00</div>
-          <div class="label">Days</div>
-        </li>
-        <li id="hours">
-          <div class="number">00</div>
-          <div class="label">Hours</div>
-        </li>
-        <li id="minutes">
-          <div class="number">00</div>
-          <div class="label">Minutes</div>
-        </li>
-        <li id="seconds">
-          <div class="number">00</div>
-          <div class="label">Seconds</div>
-        </li>
-      </ul>
-      <button class="botao">Subscribe</button>
-    </section>
-    <section class="rocket">
-      <img src="./assets/rocket.svg">
-      <span id="modal">05:00</span>
-    </section>
-  </main>
+    <main>
+        <section class="timer">
+            <p class="title">Preparing to launch</p>
+            <ul id="countdown">
+                <li id="days">
+                    <div class="number">00</div>
+                </li>
+                <div class="label">Days</div>
+
+                <li id="hours">
+                    <span class="hours" id="hour"></span>
+                </li>
+                <div class="label">Hours</div>
+
+                <li id="minutes">
+                    <span class="minutes" id="minute"></span>
+                </li>
+                <div class="label">Minutes</div>
+
+                <li id="seconds">
+                    <span class="seconds" id="second"></span>
+                </li>
+                <div class="label">Seconds</div>
+
+            </ul>
+            <button class="botao">Subscribe</button>
+        </section>
+        <section class="rocket">
+            <img src="./assets/rocket.svg">
+        </section>
+
+    </main>
 </body>
 
 
