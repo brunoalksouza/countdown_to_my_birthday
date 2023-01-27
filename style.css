@@ -4,7 +4,7 @@ body {
   color: black;
   font-family: "Arial Narrow", Arial, sans-serif;
   text-align: center;
-  padding: 100px 10px;
+  padding: 60px 5px;
   font-weight: normal;
 }
 
@@ -23,9 +23,8 @@ main {
 
 /* timer */
 
-.timer {
-  margin-top: 90px;
-  margin-right: 130px;
+.countdown-container{
+  margin-right: 50px;
 }
 
 ul#countdown {
@@ -35,10 +34,11 @@ ul#countdown {
 }
 
 li {
-  margin: 23px;
+  margin-right: 23px;
   padding: 0;
   display: inline-block;
   font-size: 72px;
+  line-height: 2px;
 }
 
 .label {
@@ -46,6 +46,8 @@ li {
   font-size: 18px;
   font-size: 1.5vw;
   text-transform: uppercase;
+  font-weight: 550;
+  margin-bottom: 50px;
 }
 
 /* botao */
