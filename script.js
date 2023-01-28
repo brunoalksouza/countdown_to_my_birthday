@@ -1,7 +1,7 @@
-const days = document.querySelectorAll("days");
-const hours = document.querySelectorAll("hours");
-const minutes = document.querySelectorAll("minutes");
-const seconds = document.querySelectorAll("seconds");
+const days = document.querySelectorByID("days");
+const hours = document.querySelectorByID("hours");
+const minutes = document.querySelectorByID("minutes");
+const seconds = document.querySelectorByID("seconds");
 
 const currentYear = new Date().getFullYear();
 
@@ -17,7 +17,7 @@ function updateCountdownTime() {
   const s = Math.floor(diff / 1000) % 60;
 
   days.innerHTML = d;
-  hours.innerHTML = d < 10 ? "0" + d : d;
+  hours.innerHTML = h < 10 ? "0" + h : h;
   minutes.innerHTML = m < 10 ? "0" + m : m;
   seconds.innerHTML = s < 10 ? "0" + s : s;
 
