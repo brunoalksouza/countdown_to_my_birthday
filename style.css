@@ -8,6 +8,13 @@ body {
   font-weight: normal;
 }
 
+@media (max-width: 1027px) {
+  html,
+  body {
+    padding-top: 25px;
+  }
+}
+
 main {
   display: flex;
   justify-content: center;
