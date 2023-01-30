@@ -16,9 +16,9 @@ function updateCountdownTime() {
   document.getElementById("minutes").innerHTML = addZero(m);
   document.getElementById("seconds").innerHTML = addZero(s);
 
-  console.log(
-    addZero(d) + "-" + addZero(h) + "-" + addZero(m) + "-" + addZero(s)
-  );
+  // console.log(
+  //   addZero(d) + "-" + addZero(h) + "-" + addZero(m) + "-" + addZero(s)
+  // );
 }
 
 function addZero(i) {
@@ -42,5 +42,5 @@ function openModal() {
     }
   };
 
-  return console.log("deu");
+  // return console.log("deu");
 }

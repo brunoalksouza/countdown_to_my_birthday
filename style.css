@@ -4,7 +4,7 @@ body {
   color: black;
   font-family: "Arial Narrow", Arial, sans-serif;
   text-align: center;
-  padding: 95px 2px;
+  padding-top: 62px;
   font-weight: normal;
 }
 
@@ -117,7 +117,7 @@ li {
     0px 9px 46px 8px rgba(0, 0, 0, 0.12)
   );
 
-  align-items:flex-start;
+  align-items: flex-start;
 
   border-radius: 15px;
   background-color: white;
