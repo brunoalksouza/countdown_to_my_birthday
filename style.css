@@ -4,7 +4,7 @@ body {
   color: black;
   font-family: "Arial Narrow", Arial, sans-serif;
   text-align: center;
-  padding: 60px 5px;
+  padding: 95px 2px;
   font-weight: normal;
 }
 
@@ -21,11 +21,23 @@ main {
   font-weight: 500;
 }
 
-/* timer */
-
-.countdown-container {
-  margin-right: 50px;
+img {
+  margin-left: 20px;
 }
+
+@media (max-width: 1134px) {
+  img {
+    width: 500px;
+  }
+}
+
+@media (max-width: 1027px) {
+  img {
+    display: none;
+  }
+}
+
+/* timer */
 
 ul#countdown {
   color: black;
@@ -41,10 +53,19 @@ li {
   line-height: 2px;
 }
 
+@media (max-width: 378px) {
+  li {
+    font-size: 32px;
+    line-height: 2px;
+  }
+  li .label {
+    font-size: 22px;
+  }
+}
+
 .label {
   color: black;
-  font-size: 18px;
-  font-size: 1.5vw;
+  font-size: 3vh;
   text-transform: uppercase;
   font-weight: 550;
   margin-bottom: 50px;
@@ -54,19 +75,94 @@ li {
 
 .botao {
   background-color: #5852c2;
-  font-size: 24px;
+  font-size: 20px;
   border-radius: 5px;
-  padding: 10px;
+  padding: 15px;
   color: white;
   border: none;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   border-width: 1px 1px;
-  transition: 0.2s;
+  transition: 0.1s;
 }
 
 .botao:hover {
   cursor: pointer;
-  transform: scale(1.05);
+  transform: scale(1.03);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.219);
+}
+
+/* modal */
+
+.modal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+
+  background-color: rgba(0, 0, 0, 0.137);
+}
+
+.modal {
+  box-shadow: var(
+    --mdc-dialog-container-elevation,
+    0px 11px 15px -7px rgba(0, 0, 0, 0.2),
+    0px 24px 38px 3px rgba(0, 0, 0, 0.14),
+    0px 9px 46px 8px rgba(0, 0, 0, 0.12)
+  );
+
+  align-items:flex-start;
+
+  border-radius: 15px;
+  background-color: white;
+  padding: 3vh;
+
+  display: flex;
+  flex-direction: column;
+  overflow: auto; /* Enable scroll if needed */
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+
+  width: 400px;
+}
+
+.label {
+  font-size: 2vh;
+}
+
+input[type="text"],
+input[type="email"] {
+  outline: none;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+
+  font-size: 15px;
+}
+
+.loginBtn {
+  background-color: #04aa6d;
+  color: white;
+  border-radius: 5px;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.loginBtn:hover {
+  opacity: 0.8;
 }

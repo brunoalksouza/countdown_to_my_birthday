@@ -1,30 +1,46 @@
-const days = document.querySelectorByID("days");
-const hours = document.querySelectorByID("hours");
-const minutes = document.querySelectorByID("minutes");
-const seconds = document.querySelectorByID("seconds");
-
 const currentYear = new Date().getFullYear();
 
-const birthday = new Date(`June 23 ${currentYear} 00:00:00`);
+const myBirthday = new Date(`June 23 ${currentYear} 00:00:00`);
 
 function updateCountdownTime() {
   const currentTime = new Date();
-  const diff = birthday - currentTime;
+  const diff = myBirthday - currentTime;
 
   const d = Math.floor(diff / 1000 / 60 / 60 / 24);
   const h = Math.floor(diff / 1000 / 60 / 60) % 24;
   const m = Math.floor(diff / 1000 / 60) % 60;
   const s = Math.floor(diff / 1000) % 60;
 
-  days.innerHTML = d;
-  hours.innerHTML = h < 10 ? "0" + h : h;
-  minutes.innerHTML = m < 10 ? "0" + m : m;
-  seconds.innerHTML = s < 10 ? "0" + s : s;
+  document.getElementById("days").innerHTML = addZero(d);
+  document.getElementById("hours").innerHTML = addZero(h);
+  document.getElementById("minutes").innerHTML = addZero(m);
+  document.getElementById("seconds").innerHTML = addZero(s);
 
-  console.log( d + "-" + h + "-" + m + "-" + s);
+  console.log(
+    addZero(d) + "-" + addZero(h) + "-" + addZero(m) + "-" + addZero(s)
+  );
+}
+
+function addZero(i) {
+  if (i < 10) {
+    return "0" + i;
+  } else return i;
 }
 
 setInterval(updateCountdownTime, 1000);
- 
 
 // modal
+
+function openModal() {
+  const modal = document.getElementById("modal-container");
+
+  modal.style.display = "flex";
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+
+  return console.log("deu");
+}

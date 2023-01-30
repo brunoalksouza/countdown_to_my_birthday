@@ -1,48 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css" />
-    <script src="script.js"></script>
-  </head>
 
-  <body>
-    <main>
-      <section class="countdown-container">
-        <p class="title">Preparing to launch...</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
 
-        <ul id="countdown" class="countdown">
-          <li class="time">
-            <p id="days">00</p>
-            <div class="label">Days</div>
-          </li>
-          <li class="time">
-            <p id="hours">00</p>
-            <div class="label">Hours</div>
-          </li>
-          <li class="time">
-            <p id="minutes">00</p>
-            <div class="label">Minutes</div>
-          </li>
-          <li class="time">
-            <p id="seconds">00</p>
-            <div class="label">Seconds</div>
-          </li>
-        </ul>
-        <!-- btn modal -->
-        <button class="botao" id="openModal">Subscribe</button>
-        <!-- modal -->
-        
+<body>
+  <main>
+    <section class="countdown-container">
+      <p class="title">Preparing to launch...</p>
 
-        <!-- fim do modal -->
-      </section>
-      <section class="rocket">
-        <img src="./assets/rocket.svg" />
-      </section>
-    </main>
-  </body>
+      <ul id="countdown" class="countdown">
+        <li class="time">
+          <p id="days">00</p>
+          <div class="label">Days</div>
+        </li>
+        <li class="time">
+          <p id="hours">00</p>
+          <div class="label">Hours</div>
+        </li>
+        <li class="time">
+          <p id="minutes">00</p>
+          <div class="label">Minutes</div>
+        </li>
+        <li class="time">
+          <p id="seconds">00</p>
+          <div class="label">Seconds</div>
+        </li>
+      </ul>
+      <!-- btn modal -->
+      <button class="botao" id="openModal" onclick="openModal()">Subscribe</button>
+
+      <!-- modal -->
+
+      <div id="modal-container" class="modal-container" style="display: none;">
+        <div id="modal" class="modal">
+          
+          <label for="name"><b>Name</b></label>
+          <input type="text" placeholder="Name" name="name" required>
+
+          <label for="email"><b>E-mail</b></label>
+          <input type="email" placeholder="E-mail" name="email" required>
+
+          <button class="loginBtn" type="submit">Subscribe</button>
+
+        </div>
+      </div>
+
+      <!-- fim do modal -->
+
+    </section>
+    <section class="rocket">
+      <img src="./assets/rocket.svg" />
+    </section>
+  </main>
+  <script src="script.js"></script>
+
+</body>
+
 </html>
